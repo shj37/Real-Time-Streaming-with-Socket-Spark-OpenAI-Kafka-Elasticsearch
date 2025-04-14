@@ -1,0 +1,12 @@
+# search for containing "amazing"
+GET /customers_review/_search?q="amazing"
+
+# search for containing "amazing" in text
+GET /customers_review/_search
+{
+    "query": {
+        "match_phrase": {
+            "text": "amazing"
+        }
+    }
+}
